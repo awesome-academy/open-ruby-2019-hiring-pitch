@@ -34,7 +34,6 @@ class Owner::PitchesController < OwnerController
 
   def destroy
     @pitch.destroy
-
     if @pitch.destroyed?
       flash[:success] = t ".delete_pitch"
       redirect_to request.referrer || root_url

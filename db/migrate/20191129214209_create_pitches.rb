@@ -11,6 +11,7 @@ class CreatePitches < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :pitches, [:user_id, :created_at]
   end
 
   def down

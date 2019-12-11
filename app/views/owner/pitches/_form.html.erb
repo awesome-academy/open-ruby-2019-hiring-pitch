@@ -5,8 +5,8 @@
   <%= f.label :address, t(".address") %>
   <%= f.text_field :address, class: "form-control", required: "required" %><br>
   <%= f.label :image, t(".image") %>
-  <%= f.file_field :image, class: "form-control" %><br>
-  <%= f.label :start_time, t(".start_time") %>
+  <%= f.file_field :image, class: "form-control", required: "required" %><br>
+  <%= f.label :start_time, t(".start_time"), required: "required" %>
   <%= f.time_field :start_time, class: "form-control", required: "required" %><br>
   <%= f.label :end_time, t(".end_time") %>
   <%= f.time_field :end_time, class: "form-control", required: "required" %><br>

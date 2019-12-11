@@ -2,11 +2,11 @@
 <div class= "home">
   <section class="carousel-default">
     <div id="carousel-default" class="carousel slide" data-ride="carousel">
-      <%= form_tag("#", class: "navbar-form navbar-center", role: "search") do |f| %>
+      <%= form_tag(root_path, class: "navbar-form navbar-center", method: :get) do |f| %>
         <div class="input-group col-md-6">
-          <%= text_field_tag :search, "", class: "form-control", placeholder: t(".search") %>
+          <%= text_field_tag :search, params[:search], class: "form-control", placeholder: t(".search") %>
             <div class="input-group-btn">
-              <%= link_to "#", class:"btn btn-default col-md-4" do %>
+              <%= button_tag(type: "submit", class:"btn btn-default col-md-4") do %>
                 <i class="glyphicon glyphicon-search"></i>
               <% end %>
             </div>
@@ -37,11 +37,16 @@
     </div>
   </section>
   <h3 class="text-center"><%= t".welcome" %></h3><br>
+<<<<<<< HEAD
   <div class="container">
+=======
+  <div class="container">
+>>>>>>> :pitch management
     <div class="row">
     <% @pitches.each do |pitch| %>
       <div class="col-md-3">
         <div class="thumbnail">
+<<<<<<< HEAD
           <p><%= get_image_pitch pitch %></p>
           <div class="caption">
             <h3><%= pitch.address %></h3>
@@ -57,5 +62,23 @@
     <% end %>
     </div>
     <%= paginate @pitches, theme: "twitter-bootstrap-3" %>
+=======
+          <p><%= image_tag(get_image_pitch(pitch)) %></p>
+          <div class="caption">
+            <h3><%= pitch.address %></h3>
+            <p><%= pitch.description %></p>
+            <p><a class="btn btn-default"  ><%= pitch.price %>VND/h</a>
+            <%= link_to t(".Detail"), owner_pitch_path(pitch.id), class: "btn btn-hinfo" %>
+            </p>
+            <a href="#" class="btn btn-hdanger" role="button">
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>Booking
+            </a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+    <%= paginate @pitches, theme: "twitter-bootstrap-3" %>
+>>>>>>> :pitch management
   </div>
 <div>

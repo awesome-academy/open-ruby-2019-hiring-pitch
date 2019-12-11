@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :pitches, dependent: :destroy
   has_many :user_pitch_reactions, as: :user_pitch_reactionable
   has_one :profile_user, dependent: :destroy
-  
+
   enum role: %i(user owner admin)
   mount_uploader :avatar, AvatarUploader
 
@@ -18,10 +18,10 @@ class User < ApplicationRecord
   validate  :avatar_size
 
   has_secure_password
-  
+
   USER_PARAMS = %i(fullname email password password_confirmation).freeze
   USER_UPDATE_PARAMS = %i(fullname email password password_confirmation address phone avatar).freeze
- 
+
   class << self
     def digest string
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

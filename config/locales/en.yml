@@ -10,11 +10,11 @@ en:
       detail: "Detail"
       booking: "Booking"
       vnd: "VND/h"
-  
-  layouts: 
+
+  layouts:
     application:
       base_title: "OpenRuby2019HiringPitch"
-    
+
     header:
       home: "Home"
       logo: "AIC sport"
@@ -25,12 +25,12 @@ en:
       settings: "Settings"
       log_out: "Log out"
       owner: "Owner"
-    
-    footer: 
+
+    footer:
       footer: "BY Pham Huu Luan"
 
   users:
-    new: 
+    new:
       sign_up: "Sign up"
       p_signup: "Please fill in this form to create an account!"
       name : "Username"
@@ -39,7 +39,7 @@ en:
       password_confirmation:  "Confirm Password"
       submit: "Submit"
       already: "Already have an account? %{href}"
-    create: 
+    create:
       error: "Error!"
     update:
       success: "Profile updated"
@@ -55,7 +55,7 @@ en:
       upload: "Upload a different photo..."
       info: "Personal info"
       submit: "Save Changes"
-    show: 
+    show:
       name : "User Name:"
       email: "Email :"
       password: "Password"
@@ -65,7 +65,7 @@ en:
       address: "Address :"
     load_user:
       not_found: "Not Found User"
-    avatar_size: 
+    avatar_size:
       errors: "should be less than 5MB"
     action_time:
       errors: "Start time must be less than end time"
@@ -74,7 +74,7 @@ en:
     error_messages:
       error: "error"
       the_form: "The form contains"
-  
+
   sessions:
     new:
       login: "Login"
@@ -82,7 +82,7 @@ en:
       password: "Password"
       submit: "Login"
       donnot: "Don't have an account? %{href1}"
-      remember : "Remember" 
+      remember : "Remember"
       forgot: "Forgot Password?"
     create:
       danger: "Invalid email/password combination"
@@ -108,17 +108,23 @@ en:
         error: "Error Create"
       update:
         success: "Complete Update"
+<<<<<<< HEAD
         not_update: "Erorr Update"
+=======
+>>>>>>> :pitch management
       destroy:
         delete_pitch: "Complete Delete"
         not_deleted: "Erorr Delete"
       show:
         not_found: "Not Found Pitch"
+<<<<<<< HEAD
         number_reviews: "10 reviews"
         current_price: "Current price :"
         vnd: "VND/H"
         time: "Time : "
         booking: "Booking"
+=======
+>>>>>>> :pitch management
       form:
         submit: "Submit"
         description: "Description"
@@ -128,14 +134,20 @@ en:
         end_time: "End Time"
         price: "Price"
         status: "Status"
+<<<<<<< HEAD
         disable: "Disable"
         enable: "Enable"
+=======
+>>>>>>> :pitch management
       new:
         new: "New Pitches"
       pitch:
         sure: "You Sure?"
         update: "Update"
         delete: "Delete"
+<<<<<<< HEAD
         disable: "Disable"
         enable: "Enable"
   error: "Start time must be less than end time"
+=======
+>>>>>>> :pitch management
