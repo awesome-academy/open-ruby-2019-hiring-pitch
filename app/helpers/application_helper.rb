@@ -5,7 +5,11 @@ module ApplicationHelper
   end  
 
   def get_image object
-    object.avatar? ? object.avatar.url : Settings.helper.avatar
+    object.avatar? ? object.avatar.url: Settings.helper.avatar
+  end
+
+  def get_image_pitch pitch
+    pitch.image? ? pitch.image.url: Settings.helper.image
   end
 
   def get_image_pitch pitch

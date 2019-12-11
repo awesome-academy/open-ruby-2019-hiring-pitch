@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active">
+              <%= image_tag(get_image_pitch(@pitch)) %>
+            </div>
+          </div>
+        </div>
+        <div class="details col-md-6">
+          <h3 class="product-title"><%= @pitch.address %></h3>
+            <div class="rating">
+              <div class="stars">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+              </div>
+                <span class="review-no">41 reviews</span>
+            </div>
+            <p class="product-description">
+              <%= @pitch.description %>
+            </p>
+            <h4 class="price">current price: <span>
+			  <%= @pitch.price %></span>VND/H
+			</h4>
+            <p>Time:
+              <%= @pitch.start_time.strftime("%H:%M") %>-<%= @pitch.end_time.strftime("%H:%M") %>
+            </p>
+            <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+            <div class="action">
+              <button class="add-to-cart btn btn-default" type="button">Booking</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
