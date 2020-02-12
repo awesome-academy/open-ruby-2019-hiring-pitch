@@ -174,3 +174,9 @@ en:
       new: "New Comment"
       submit: "Submit"
       your_comment: "Your comment"
+  ratings:
+    create:
+      successful: "Add successful rating"
+      fail: "More rating failed"
+      not_found: "Not foud pitch"
+      loggin: "login required"

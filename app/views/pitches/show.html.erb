@@ -11,16 +11,6 @@
         </div>
         <div class="details col-md-6">
           <h3 class="product-title"><%= @pitch.address %></h3>
-            <div class="rating">
-              <div class="stars">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-              </div>
-            <span class="review-no"><%= t ".number_reviews" %></span>
-          </div>
             <p class="product-description"><%= @pitch.description %></p>
             <h4 class="price"><%= t ".current_price" %><span><%= @pitch.price %></span><%= t ".vnd" %></h4>
             <p><%= t ".time" %><%= @pitch.start_time.strftime(Settings.time.strftime) %>-<%= @pitch.end_time.strftime(Settings.time.strftime) %></p>
@@ -28,11 +18,23 @@
             <%= link_to t(".booking"), new_pitch_booking_path(@pitch), class: "add-to-cart btn btn-default" %>
           </div>
         </div>
+        <br><br>
+        <%= render partial: "ratings/index" %>
       </div>
     </div>
     <br>
     <section class="content-item" id="comments">
       <div class="container">
+        <div class= "row">
+          <div class="col-sm-8">
+            <% if current_user %>
+              <p>Your vote: </p>
+              <%= render "ratings/new" %>
+            <% else %>
+              <% false %>
+            <% end %>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-8">
             <% if current_user %>

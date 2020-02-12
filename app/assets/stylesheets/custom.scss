@@ -417,7 +417,7 @@ img {
 }
 
 .tab-content img {
-  height: 400px;
+  height: 470px;
   width: 100%;
 }
 
@@ -472,6 +472,7 @@ img {
   color: $white;
   font-weight: bold;
   padding: 1.2em 1.5em;
+  margin-bottom: 50px;
   text-transform: UPPERCASE;
   -webkit-transition: background .3s ease;
   transition: background .3s ease;
@@ -751,4 +752,139 @@ input, button, select, textarea {
   color: $grey;
   font-size: 15px;
   margin-right: 10px;
+}
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.jq-stars {
+  display: inline-block;
+}
+
+.jq-rating-label {
+  font-size: 22px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  font-family: helvetica, arial, verdana;
+}
+
+.jq-star {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.jq-star-svg {
+  padding-left: 3px;
+  width: 100%;
+  height: 100% ;
+}
+
+
+.jq-star-svg path {
+  /* stroke: #000; */
+  stroke-linejoin: round;
+}
+
+/* un-used */
+.jq-shadow {
+  -webkit-filter: drop-shadow( -2px -2px 2px #888 );
+  filter: drop-shadow( -2px -2px 2px #888 );
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: royalblue;
+}
+
+hr {
+  margin: 40px 0;
+  border-top: 1px dashed #dddddd;
+}
+
+.logo {
+width: 300px;
+}
+
+iframe {
+  margin: 10px 0;
+  display: block;
+}
+
+.info {
+  font-size: 13px;
+  color: lightgray;
+}
+
+.content {
+  width: 640px;
+}
+
+.live-rating {
+font-size: 43px;
+margin-left: 10px;
+color: hotPink;
+top: -3px;
+position: relative;
+}
+
+pre.prettyprint {
+  font-family: "Lucida Console", Monaco, monospace;
+  display: block;
+  margin: 20px 0;
+  font-size: 13px;
+  line-height: 20px;;
+  padding: 20px;
+  background: #EEEEEE;
+  border: 0;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  width: auto;
 }

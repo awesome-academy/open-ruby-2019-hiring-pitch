@@ -19,7 +19,8 @@ helper:
   image: "image_pitch.jpg"
 uploader:
   resize_to_limit: [400,400]
-perpage: 10
+perpage: 6
+perpagehome: 12
 time:
   strftime: "%H:%M"
   time_comment: "%B, %d %Y %H:%M"

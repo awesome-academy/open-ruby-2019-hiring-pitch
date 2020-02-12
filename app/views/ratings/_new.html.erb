@@ -1,0 +1,4 @@
+<%= form_for @rating, remote: true do |f| %>
+ <span class="my-rating-9"></span>
+ <%= hidden_field_tag :pitch_id, @pitch.id %>
+<% end %>
